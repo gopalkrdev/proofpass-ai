@@ -36,7 +36,6 @@ export async function anchorProof({ proofHash, claim }) {
     const count = await contract.proofCount();
     proofId = Number(count) - 1;
   } catch {
-    // The transaction itself is still valid if proofId cannot be read.
   }
 
   return {
